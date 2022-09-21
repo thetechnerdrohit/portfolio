@@ -1,4 +1,4 @@
-import { GetStaticProps } from "next";
+import type { GetServerSideProps, GetStaticProps } from "next";
 import Head from "next/head";
 import About from "../components/About";
 import WorkExperience from "../components/WorkExperience";
@@ -84,7 +84,7 @@ export default Home;
 //- The data can be publicly cached (not user-specific).
 //- The page must be pre-rendered (for SEO) and be very fast — getStaticProps generates HTML and JSON files, both of which can be cached by a CDN for performance.
 
-export const getStaticProps: GetStaticProps = async (ctx) => {
+export const getServerSideProps: GetServerSideProps<Props> = async () => {
   const pageInfo: PageInfo = await fetchPageInfo();
   const experiences: Experience[] = await fetchExperiences();
   const skills: Skill[] = await fetchSkills();
@@ -99,5 +99,6 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
       projects,
       socials,
     },
+    revalidate: 1000,
   };
 };
