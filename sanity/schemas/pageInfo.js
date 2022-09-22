@@ -42,5 +42,11 @@ export default {
       type: "array",
       of: [{ type: "reference", to: { type: "social" } }],
     },
+    {
+      name: "typewriter",
+      title: "Typewriter",
+      type: "array",
+      of: [{ type: "string" }],
+    },
   ],
 };
