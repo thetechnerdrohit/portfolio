@@ -25,7 +25,7 @@ const Hero = ({ pageInfo }: Props) => {
         width={100}
         height={100}
         src={urlFor(pageInfo?.profilePic).url()}
-        className="relative rounded-full h-32 w-32 mx-auto object-cover"
+        className="relative rounded-full h-40 w-40 mx-auto object-cover"
         alt="Rohit Chauhan"
       />
       {/* <Image
