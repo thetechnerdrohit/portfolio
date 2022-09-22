@@ -22,8 +22,8 @@ const Hero = ({ pageInfo }: Props) => {
     <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
       <BackgroundCircles />
       <Image
-        width={20}
-        height={20}
+        width={100}
+        height={100}
         src={urlFor(pageInfo?.profilePic).url()}
         className="relative rounded-full h-32 w-32 mx-auto object-cover"
         alt="Rohit Chauhan"
@@ -41,7 +41,7 @@ const Hero = ({ pageInfo }: Props) => {
         </h2>
         <h1 className="text-5xl lg:text-6xl font-semibold px-10">
           <span className="mr-3">{text}</span>
-          <Cursor cursorColor="#F7AB0A" />
+          <Cursor cursorColor="#e600e6" />
         </h1>
         <div className="pt-5">
           <Link href="#about">

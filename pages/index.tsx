@@ -29,7 +29,7 @@ const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
   return (
     <div
       className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-scroll overflow-x-hidden z-0
-    scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80"
+    scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#e600e6]/80"
     >
       <Head>
         <title>Rohit&apos;s Portfolio</title>
@@ -63,8 +63,8 @@ const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
         <footer className="sticky bottom-5 w-full cursor-pointer">
           <div className="flex items-center justify-center">
             <Image
-              width={20}
-              height={20}
+              width={35}
+              height={35}
               className="h-10 w-10 rounded-full filter grayscale hover:grayscale-0 cursor-pointer"
               src={urlFor(pageInfo?.profilePic).url()}
               alt={pageInfo?.name}
@@ -84,7 +84,7 @@ export default Home;
 //- The data can be publicly cached (not user-specific).
 //- The page must be pre-rendered (for SEO) and be very fast — getStaticProps generates HTML and JSON files, both of which can be cached by a CDN for performance.
 
-export const getServerSideProps: GetServerSideProps<Props> = async () => {
+export const getStaticProps: GetStaticProps<Props> = async () => {
   const pageInfo: PageInfo = await fetchPageInfo();
   const experiences: Experience[] = await fetchExperiences();
   const skills: Skill[] = await fetchSkills();

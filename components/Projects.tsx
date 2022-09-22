@@ -20,7 +20,7 @@ const Projects = ({ projects }: Props) => {
       </h3>
       <div
         className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x 
-      snap-mandatory z-20 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80"
+      snap-mandatory z-20 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#e600e6]/80"
       >
         {projects?.map((project, i) => (
           <div
@@ -37,7 +37,7 @@ const Projects = ({ projects }: Props) => {
             />
             <div className="space-y-10 px-0 md:px-10 max-w-6xl">
               <h4 className="text-4xl font-semibold text-center">
-                <span className="underline decoration-[#F7AB0A]/50">
+                <span className="underline decoration-[#e600e6]/50">
                   Case Study {i + 1} of {projects?.length}:
                 </span>{" "}
                 UPS clone
@@ -45,8 +45,8 @@ const Projects = ({ projects }: Props) => {
               <div className="flex items-center space-x-2 justify-center">
                 {project?.technologies?.map((tech) => (
                   <Image
-                  width={20}
-                  height={20}
+                    width={100}
+                    height={100}
                     key={tech._id}
                     className="h1-10 w-10"
                     src={urlFor(tech?.image).url()}
@@ -61,7 +61,7 @@ const Projects = ({ projects }: Props) => {
           </div>
         ))}
       </div>
-      <div className="w-full absolute top-[30%] bg-[#F7AB0A]/10 left-0 h-[500px] -skew-y-12" />
+      <div className="w-full absolute top-[30%] bg-[#e600e6]/10 left-0 h-[500px] -skew-y-12" />
     </motion.div>
   );
 };

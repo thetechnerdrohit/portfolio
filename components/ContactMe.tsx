@@ -12,19 +12,19 @@ const ContactMe = (props: Props) => {
       <div className="flex flex-col space-y-10">
         <h4 className="text-4xl text-semibold text-center">
           I have got just what you need.{" "}
-          <span className="decoration-[#F7AB0A]/50 underline">Lets Talk.</span>
+          <span className="decoration-[#e600e6]/50 underline">Lets Talk.</span>
         </h4>
         <div className="space-y-10">
           <div className="flex items-center space-x-5 justify-center">
-            <PhoneIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
+            <PhoneIcon className="text-[#e600e6] h-7 w-7 animate-pulse" />
             <p className="text-2xl">13123123</p>
           </div>
           <div className="flex items-center space-x-5 justify-center">
-            <MapPinIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
+            <MapPinIcon className="text-[#e600e6] h-7 w-7 animate-pulse" />
             <p className="text-2xl">13123123</p>
           </div>
           <div className="flex items-center space-x-5 justify-center">
-            <EnvelopeIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
+            <EnvelopeIcon className="text-[#e600e6] h-7 w-7 animate-pulse" />
             <p className="text-2xl">13123123</p>
           </div>
         </div>
@@ -36,7 +36,7 @@ const ContactMe = (props: Props) => {
           </div>
           <input placeholder="Subject" className="form-control" type="text" />
           <textarea placeholder="Message" className="form-control" />
-          <button className="border-solid border-2 border-[#F7AB0A] hover:bg-[#F7AB0A] hover:text-black py-5 px-10 rounded-md font-bold text-lg transition-all">
+          <button className="border-solid border-2 border-[#e600e6] hover:bg-[#e600e6] hover:text-black py-5 px-10 rounded-md font-bold text-lg transition-all">
             Submit
           </button>
         </form>

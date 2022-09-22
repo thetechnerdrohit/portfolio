@@ -17,10 +17,10 @@ const ExperienceCard = ({ experience }: Props) => {
         initial={{ y: -200, opacity: 0 }}
         transition={{ duration: 1.2 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="w-32 h-32 rounded-full xl:w-[200px] xl:h-[200px] object-cover object-center"
+        // viewport={{ once: true }}
+        className="w-32 h-32 rounded-full xl:w-[150px] xl:h-[150px] object-cover object-center"
         src={urlFor(experience?.companyImage).url()}
-        alt=""
+        alt={experience?.company}
       />
       <div className="px-0 md:px-10">
         <h4 className="text-4xl font-light">{experience.jobTitle}</h4>
@@ -28,10 +28,10 @@ const ExperienceCard = ({ experience }: Props) => {
         <div className="flex space-x-2 my-2">
           {experience?.technologies?.map((tech) => (
             <Image
-            width={20}
-            height={20}
+              width={50}
+              height={50}
               key={tech._id}
-              className="h-10 w-10 rounded-full"
+              className="h-10 w-10 rounded-full mx-2"
               src={urlFor(tech?.image).url()}
               alt={tech.title}
             />
