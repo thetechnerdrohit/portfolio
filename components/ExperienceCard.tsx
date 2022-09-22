@@ -14,10 +14,10 @@ const ExperienceCard = ({ experience }: Props) => {
     hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden"
     >
       <motion.img
-        initial={{ y: -200, opacity: 0 }}
+        initial={{ y: -100, opacity: 0 }}
         transition={{ duration: 1.2 }}
         whileInView={{ opacity: 1, y: 0 }}
-        // viewport={{ once: true }}
+        viewport={{ once: true }}
         className="w-32 h-32 rounded-full xl:w-[150px] xl:h-[150px] object-cover object-center"
         src={urlFor(experience?.companyImage).url()}
         alt={experience?.company}
