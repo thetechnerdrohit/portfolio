@@ -1,10 +1,10 @@
 {
 	"env": {
-		"NEXT_PUBLIC_BASE_URL": "https://isnt-aroravector-gmail-com-awesome-70b17.netlify.app/api"
+		"NEXT_PUBLIC_BASE_URL": "https://thetechnerdrohit.netlify.app"
 	},
 	"build": {
 		"env": {
-			"NEXT_PUBLIC_BASE_URL": "https://isnt-aroravector-gmail-com-awesome-70b17.netlify.app/api"
+			"NEXT_PUBLIC_BASE_URL": "https://thetechnerdrohit.netlify.app"
 		}
 	}
 }
