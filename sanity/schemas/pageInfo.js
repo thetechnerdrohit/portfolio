@@ -37,6 +37,16 @@ export default {
       type: "string",
     },
     {
+      name: "abount",
+      title: "About",
+      type: "string",
+    },
+    {
+      name: "desc",
+      title: "Desc",
+      type: "string",
+    },
+    {
       name: "socials",
       title: "Socials",
       type: "array",

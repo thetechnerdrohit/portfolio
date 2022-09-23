@@ -6,6 +6,7 @@ import { Experience } from "../typing";
 type Props = { experiences: Experience[] };
 
 const WorkExperience = ({ experiences }: Props) => {
+  {console.log({ experiences })}
   return (
     <motion.div
       initial={{ opacity: 0 }}

@@ -1,8 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { urlFor } from "../sanity";
+import { PageInfo } from "../typing";
 
-type Props = { about: any };
+type Props = { about: PageInfo };
 
 const About = ({ about }: Props) => {
   return (
@@ -42,15 +43,10 @@ const About = ({ about }: Props) => {
       <div className="space-y-10 px-0 md:px-10">
         <h4 className="text-4xl font-semibold">
           Here is a{" "}
-          <span className="underline decoration-[#e600e6]">litte</span>{" "}
-          background
+          little{" "}
+          <span className="underline decoration-[#e600e6]">background</span>
         </h4>
-        <p className="text-base">
-          I&apos;m Rohit. Here&apos;s a bit about me... I&apos;ve been coding
-          for over 4+ years. As a full stack developer. I&apos;ve worked with
-          both startups and large corporations to help build & scale their
-          compaines,
-        </p>
+        <p className="text-base">{about.desc}</p>
       </div>
     </motion.div>
   );

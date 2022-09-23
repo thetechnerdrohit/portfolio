@@ -24,6 +24,8 @@ export interface PageInfo extends SanityBody {
   phoneNumber: string;
   profilePic: Image;
   typewriter: string[];
+  about: string;
+  desc: string;
 }
 
 export interface Technology extends SanityBody {
