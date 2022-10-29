@@ -31,7 +31,7 @@ function Footer() {
                 <AiFillGithub />
               </a>
             </li>
-            <li className="social-icons">
+            {/* <li className="social-icons">
               <a
                 href="https://twitter.com/thetechnerdrohit"
                 style={{ color: "white" }}
@@ -40,7 +40,7 @@ function Footer() {
               >
                 <AiOutlineTwitter />
               </a>
-            </li>
+            </li> */}
             <li className="social-icons">
               <a
                 href="https://www.linkedin.com/in/thetechnerdrohit/"
@@ -53,7 +53,7 @@ function Footer() {
             </li>
             <li className="social-icons">
               <a
-                href="https://www.instagram.com/thetechnerdrohit"
+                href="https://www.instagram.com/thisisrohitchauhan"
                 style={{ color: "white" }}
                 target="_blank" 
                 rel="noopener noreferrer"
