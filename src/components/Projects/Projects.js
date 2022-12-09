@@ -34,7 +34,7 @@ function Projects() {
               title="Webuy"
               description="A ecommerce platform for engineering students, through which u can view products, add products to your cart, proceed with payment and track your delivery status, also you can ask or take help from bot in platform itself in right bottom."
               ghLink="https://github.com/thetechnerdrohit/webuy"
-              demoLink="https://blogs.soumya-jit.tech/"
+              demoLink="https://webuy-804c5.web.app/webuy/dashboard"
             />
           </Col>
 
@@ -52,7 +52,7 @@ function Projects() {
               imgPath={ifeedback}
               title="iFeedback"
               description="A cross platform application, build for resturants to get their customers valuable feedback."
-              ghLink="https://github.com/atreyaa/AT_iFeedbackApp"
+              // ghLink="https://github.com/atreyaa/AT_iFeedbackApp"
             />
           </Col>
         </Row>
