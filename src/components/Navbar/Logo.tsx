@@ -4,6 +4,7 @@ import Link from "next/link";
 import React from "react";
 import { motion } from "framer-motion";
 
+// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call
 const MotionLink = motion(Link);
 
 const Logo = () => {
