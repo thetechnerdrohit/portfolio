@@ -2,9 +2,11 @@ import React from "react";
 import Index from "../Index";
 import Image from "next/image";
 import profilePic from "../../../public/images/profile/developer-pic-1.png";
+import lightBulb from "../../../public/images/svgs/miscellaneous_icons_1.svg";
 import AnimatedText from "./AnimatedText";
 import Link from "next/link";
 import { LinkArrow } from "../Navbar/Icons";
+import HireMe from "./HireMe";
 
 const Home = () => {
   return (
@@ -47,6 +49,10 @@ const Home = () => {
           </div>
         </div>
       </Index>
+      <HireMe />
+      <div className="absolute right-8 bottom-8 inline-block w-24">
+        <Image src={lightBulb} alt="RohitChauhan" className="w-full h-auto" />
+      </div>
     </main>
   );
 };

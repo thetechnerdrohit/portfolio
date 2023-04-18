@@ -1,3 +1,5 @@
+import Footer from "./components/Footer/Footer";
+import Navbar from "./components/Navbar/Navbar";
 import "./globals.css";
 import { Montserrat } from "next/font/google";
 
@@ -15,7 +17,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${montserrat.variable} font-mont bg-light w-full min-h-screen`}>{children}</body>
+      <body
+        className={`${montserrat.variable} font-mont bg-light w-full min-h-screen`}
+      >
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
