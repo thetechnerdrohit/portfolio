@@ -10,7 +10,7 @@ const montserrat = Montserrat({ subsets: ["latin"], variable: "--font-mont" });
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
     <main
-      className={`${montserrat.variable} min-h-screen w-full bg-light font-mont`}
+      className={`${montserrat.variable} min-h-screen w-full bg-light dark:bg-dark font-mont`}
     >
       <Navbar />
       <Component {...pageProps} />
