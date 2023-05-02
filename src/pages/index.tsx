@@ -17,6 +17,10 @@ const Home: NextPage = () => {
           <div className="w-1/2">
             <Image
               src={profilePic}
+              priority
+              sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              50vw"
               alt="TheTechNerdRohit"
               className="h-auto w-full"
             />
@@ -26,7 +30,7 @@ const Home: NextPage = () => {
               text="Turning Vision Into Reality With Code And Design."
               className="!text-left !text-8xl"
             />
-            <p className="my-4 text-base font-medium">
+            <p className="my-4 text-base font-medium dark:text-light">
               As a skilled full-stack developer, I am dedicated to turning ideas
               into innovative web applications. Explore my latest projects and
               articles, showcasing my expertise in React.js and web development.
@@ -35,14 +39,14 @@ const Home: NextPage = () => {
               <Link
                 href="RohitChauhan.pdf"
                 target="_blank"
-                className="flex items-center rounded-lg border-2 border-solid border-transparent bg-dark p-2.5 px-6 text-lg font-semibold text-light hover:border-dark hover:bg-light hover:text-dark "
+                className="flex items-center rounded-lg border-2 border-solid border-transparent bg-dark p-2.5 px-6 text-lg font-semibold text-light hover:border-dark hover:bg-light hover:text-dark dark:bg-light dark:text-dark hover:dark:border-light hover:dark:bg-dark hover:dark:text-light"
               >
                 Resume <LinkArrow className="ml-1 w-6" />
               </Link>
               <Link
                 href="mailto:thetechnerdrohit@gmail.com"
                 target="_blank"
-                className="ml-4 text-lg font-medium capitalize text-dark underline"
+                className="ml-4 text-lg font-medium capitalize text-dark underline dark:text-light"
               >
                 Contact
               </Link>

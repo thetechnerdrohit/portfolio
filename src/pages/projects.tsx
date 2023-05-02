@@ -7,6 +7,7 @@ import AnimatedText from "~/components/Home/AnimatedText";
 import Layout from "~/components/Layout";
 import { GithubIcon } from "~/components/Navbar/Icons";
 import projectImage from "public/images/projects/crypto-screener-cover-image.jpg";
+import { motion } from "framer-motion";
 
 interface FeaturedProjectProps {
   type: string;
@@ -25,6 +26,8 @@ interface ProjectProps {
   github: string;
 }
 
+const FramerImage = motion(Image);
+
 const FeaturedProject = ({
   type,
   title,
@@ -34,34 +37,48 @@ const FeaturedProject = ({
   github,
 }: FeaturedProjectProps) => {
   return (
-    <article className="rounder-br-2xl relative flex w-full items-center justify-between rounded-3xl border border-solid border-dark bg-light p-12 shadow-2xl">
-      <div className="absolute -right-6 top-1 -z-10 h-[102%] w-[101%] rounded-[2.5rem] rounded-br-3xl bg-dark" />
+    <article className="rounder-br-2xl relative flex w-full items-center justify-between rounded-3xl border border-solid border-dark bg-light p-12 shadow-2xl dark:border-light dark:bg-dark">
+      <div className="absolute -right-6 top-1 -z-10 h-[102%] w-[101%] rounded-[2.5rem] rounded-br-3xl bg-dark dark:bg-light" />
       <Link
         href={link}
         target="_blank"
         className="w-1/2 cursor-pointer overflow-hidden rounded-lg"
       >
-        <Image src={image} alt={title} className="h-auto w-full" />
+        <FramerImage
+          src={image}
+          alt={title}
+          className="h-auto w-full"
+          whileHover={{ scale: 1.05 }}
+          transition={{ duration: 0.2 }}
+          priority
+          sizes="(max-width: 768px) 100vw,
+                (max-width: 1200px) 50vw,
+                33vw"
+        />
       </Link>
 
       <div className="flex w-1/2 flex-col items-start justify-between pl-6">
-        <span className="text-xl font-medium text-primary">{type}</span>
+        <span className="text-xl font-medium text-primary dark:text-primaryDark">
+          {type}
+        </span>
         <Link
           href={link}
           target="_blank"
           className="underline-offset-2 hover:underline"
         >
-          <h2 className="my-2 w-full text-left text-4xl font-bold">{title}</h2>
+          <h2 className="my-2 w-full text-left text-4xl font-bold dark:text-light">
+            {title}
+          </h2>
         </Link>
-        <p className="my-2 font-medium text-dark">{summary}</p>
-        <div className="mt-2 flex items-center ">
+        <p className="my-2 font-medium text-dark dark:text-light">{summary}</p>
+        <div className="mt-2 flex items-center">
           <Link href={github} target="_blank" className="w-10">
             <GithubIcon className="" />
           </Link>
           <Link
             href={link}
             target="_blank"
-            className="ml-4 rounded-lg bg-dark p-2 px-6 text-lg font-semibold text-light"
+            className="ml-4 rounded-lg bg-dark p-2 px-6 text-lg font-semibold text-light dark:bg-light dark:text-dark"
           >
             Visit Project
           </Link>
@@ -73,8 +90,8 @@ const FeaturedProject = ({
 
 const Project = ({ type, title, image, link, github }: ProjectProps) => {
   return (
-    <article className="relative flex w-full flex-col items-center justify-between rounded-2xl border border-solid border-dark bg-light p-6">
-      <div className="absolute -right-6 top-1 -z-10 h-[102%] w-[102%] rounded-[2.5rem] rounded-br-3xl bg-dark" />
+    <article className="relative flex w-full flex-col items-center justify-between rounded-2xl border border-solid border-dark bg-light p-6 dark:border-light dark:bg-dark">
+      <div className="absolute -right-6 top-1 -z-10 h-[102%] w-[102%] rounded-[2.5rem] rounded-br-3xl bg-dark dark:bg-light" />
       <Link
         href={link}
         target="_blank"
@@ -84,7 +101,9 @@ const Project = ({ type, title, image, link, github }: ProjectProps) => {
       </Link>
 
       <div className="mt-4 flex w-full flex-col items-start justify-between">
-        <span className="text-xl font-medium text-primary">{type}</span>
+        <span className="text-xl font-medium text-primary dark:text-primaryDark">
+          {type}
+        </span>
         <Link
           href={link}
           target="_blank"
@@ -117,7 +136,7 @@ const ProjectsPage = () => {
         <title>Rohit Chauhan | Projects Page</title>
         <meta name="description" content=""></meta>
       </Head>
-      <main className="mb-16 flex w-full flex-col items-center justify-center">
+      <main className="mb-16 flex w-full flex-col items-center justify-center dark:text-light">
         <Layout className="pt-16">
           <AnimatedText
             text="Imagination Trumps Knowledge!"
