@@ -6,6 +6,7 @@ import Footer from "~/components/Footer/Footer";
 import Navbar from "~/components/Navbar/Navbar";
 
 import "~/styles/globals.css";
+import { api } from "~/utils/api";
 
 const montserrat = Montserrat({ subsets: ["latin"], variable: "--font-mont" });
 
@@ -24,4 +25,4 @@ const MyApp: AppType = ({ Component, pageProps }) => {
   );
 };
 
-export default MyApp;
+export default api.withTRPC(MyApp);

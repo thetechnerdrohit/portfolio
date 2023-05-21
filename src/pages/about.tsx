@@ -15,10 +15,12 @@ import Skills from "~/components/About/Skills";
 import Experience from "~/components/About/Experience";
 import TransitionEffect from "~/components/TransitionEffect";
 
-const AnimatedNumbers = ({ value }: any) => {
+const AnimatedNumbers = ({ value, springduration }: any) => {
   const ref = useRef<any>(null);
   const motionValue = useMotionValue(0);
-  const springValue = useSpring(motionValue, { duration: 3000 });
+  const springValue = useSpring(motionValue, {
+    duration: springduration || 3000,
+  });
   const isInView = useInView(ref, { once: true });
 
   useEffect(() => {
@@ -58,11 +60,11 @@ const AboutPage = () => {
                 Biography
               </h2>
               <p className="font-medium ">
-                Hi, I'm CodeBucks, a web developer and UI/UX designer with a
-                passion for creating beautiful, functional, and user-centered
-                digital experiences. With 4 years of experience in the field. I
-                am always looking for new and innovative ways to bring my
-                clients' visions to life.
+                Hi, I'm Rohit Chauhan, a web developer with a passion for
+                creating beautiful, functional, and user-centered digital
+                experiences. With 5+ years of experience in the field. I am
+                always looking for new and innovative ways to bring my clients'
+                visions to life.
               </p>
 
               <p className="my-4 font-medium">
@@ -96,7 +98,7 @@ const AboutPage = () => {
             <div className="col-span-2 flex flex-col items-end justify-between xl:col-span-8 xl:flex-row xl:items-center md:order-3">
               <div className="flex flex-col items-end justify-center xl:items-center">
                 <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
-                  {AnimatedNumbers({ value: 50 })}+
+                  {AnimatedNumbers({ value: 5, springduration: 5000 })}+
                 </span>
                 <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:text-sm">
                   satisfied clients
@@ -105,19 +107,19 @@ const AboutPage = () => {
 
               <div className="flex flex-col items-end justify-center xl:items-center">
                 <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
-                  {AnimatedNumbers({ value: 50 })}+
+                  {AnimatedNumbers({ value: 20, springduration: 6000 })}+
                 </span>
                 <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:text-sm">
-                  satisfied clients
+                  projects completed
                 </h2>
               </div>
 
               <div className="flex flex-col items-end justify-center xl:items-center">
                 <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
-                  {AnimatedNumbers({ value: 50 })}+
+                  {AnimatedNumbers({ value: 5, springduration: 7000 })}+
                 </span>
                 <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:text-sm">
-                  satisfied clients
+                  years of experience
                 </h2>
               </div>
             </div>

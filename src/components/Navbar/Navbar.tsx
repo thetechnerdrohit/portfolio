@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable @typescript-eslint/no-unsafe-return */
@@ -185,7 +186,7 @@ const Navbar = () => {
             <TwitterIcon className="" />
           </motion.a>
           <motion.a
-            href="/"
+            href="https://github.com/thetechnerdrohit"
             target="_blank"
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
@@ -194,7 +195,7 @@ const Navbar = () => {
             <GithubIcon className="" />
           </motion.a>
           <motion.a
-            href="/"
+            href="https://www.linkedin.com/in/thetechnerdrohit"
             target="_blank"
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
@@ -205,7 +206,7 @@ const Navbar = () => {
 
           <button
             onClick={() => setMode(mode === "light" ? "dark" : "light")}
-            className={`ml-3 flex items-center justify-center rounded-full p-1 ${
+            className={`ml-5 flex items-center justify-center rounded-full p-1 w-7 ${
               mode === "light" ? "bg-dark text-light" : "bg-light text-dark"
             }`}
           >
