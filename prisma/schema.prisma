@@ -1,0 +1,76 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model ContactInformation {
+  id               String                @id @default(auto()) @map("_id") @db.ObjectId
+  email            String
+  github_link      String
+  linkedin_link    String
+  twitter_link     String
+  instagram_link   String
+  contact_number   String
+  BasicInformation PersonalInformation[]
+}
+
+model ProfileInformation {
+  id               String                @id @default(auto()) @map("_id") @db.ObjectId
+  profile_image    String
+  title            String
+  biography        String
+  clients          Int
+  projects         Int
+  experience       Int
+  BasicInformation PersonalInformation[]
+}
+
+model SkillInformation {
+  id               String                @id @default(auto()) @map("_id") @db.ObjectId
+  name             String
+  description      String
+  BasicInformation PersonalInformation[]
+}
+
+model ExperienceInformation {
+  id               String                @id @default(auto()) @map("_id") @db.ObjectId
+  company_name     String
+  company_link     String
+  start_date       DateTime
+  end_date         DateTime
+  designation      String
+  responsibility   String
+  BasicInformation PersonalInformation[]
+}
+
+model ProjectInformation {
+  id                  String                @id @default(auto()) @map("_id") @db.ObjectId
+  project_name        String
+  project_description String
+  project_source_link String
+  project_demo_link   String
+  featured_project    Boolean
+  PersonalInformation PersonalInformation[]
+}
+
+model PersonalInformation {
+  id                      String                @id @default(auto()) @map("_id") @db.ObjectId
+  full_name               String  
+  hero_description        String
+  hero_sub_description    String
+  resume_link             String
+  contactInformationId    ContactInformation    @relation(fields: [contact_info], references: [id])
+  contact_info            String                @db.ObjectId
+  profileInformationId    ProfileInformation    @relation(fields: [profile_info], references: [id])
+  profile_info            String                @db.ObjectId
+  skillInformationId      SkillInformation      @relation(fields: [skill_info], references: [id])
+  skill_info              String                @db.ObjectId
+  experienceInformationId ExperienceInformation @relation(fields: [experience_info], references: [id])
+  experience_info         String                @db.ObjectId
+  projectInformationId    ProjectInformation    @relation(fields: [project_info], references: [id])
+  project_info            String                @db.ObjectId
+}
