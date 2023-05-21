@@ -6,7 +6,8 @@ import { motion } from "framer-motion";
 const Skill = ({ name, positionX = 0, positionY = 0, className }: any) => {
   return (
     <motion.div
-      className={`${className} absolute flex cursor-pointer items-center justify-center rounded-full bg-dark px-6 py-3 font-semibold text-light shadow-dark dark:text-dark dark:bg-light`}
+      className={`${className} absolute flex cursor-pointer items-center justify-center rounded-full bg-dark px-6 py-3 font-semibold text-light shadow-dark dark:bg-light dark:text-dark lg:px-4 lg:py-2 md:px-3 md:py-1.5 md:text-sm xs:bg-transparent xs:font-bold
+      xs:text-dark xs:dark:bg-transparent xs:dark:text-light`}
       whileHover={{
         scale: 1.05,
       }}
@@ -17,9 +18,9 @@ const Skill = ({ name, positionX = 0, positionY = 0, className }: any) => {
       whileInView={{
         x: positionX,
         y: positionY,
-        transition:{
+        transition: {
           duration: 1.5,
-        }
+        },
       }}
       viewport={{ once: true }}
     >
@@ -31,9 +32,14 @@ const Skill = ({ name, positionX = 0, positionY = 0, className }: any) => {
 const Skills = () => {
   return (
     <>
-      <h2 className="mt-64 w-full text-center text-8xl font-bold">Skills</h2>
-      <div className="relative flex h-screen w-full items-center justify-center rounded-full bg-circularLight dark:bg-circularDark">
-        <Skill name="Full Stack" className="!p-6" />
+      <h2 className="mt-64 w-full text-center text-8xl font-bold md:mt-32 md:text-6xl">
+        Skills
+      </h2>
+      <div className="relative flex h-screen w-full items-center justify-center rounded-full bg-circularLight dark:bg-circularDark lg:h-[80vh] lg:bg-circularLightLg lg:dark:bg-circularDarkLg sm:h-[60vh] xs:h-[50vh] md:bg-circularLightMd md:dark:bg-circularDarkMd sm:bg-circularLightSm sm:dark:bg-circularDarkSm">
+        <Skill
+          name="Full Stack"
+          className="lg:p6 md:p4 !p-6 xs:p-2 xs:text-xs"
+        />
 
         <Skill name="Team Management" positionX="-18vw" positionY="-22vw" />
         <Skill name="Product Research" positionX="0vw" positionY="-22vw" />
