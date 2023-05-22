@@ -18,7 +18,7 @@ const useThemeSwitcher = () => {
         if (theme === "dark") document.documentElement.classList.add("dark");
         else document.documentElement.classList.remove("dark");
       } else {
-        const theme = mediaQuery.matches ? "dark" : "light";
+        const theme = mediaQuery.matches ? "light" : "dark";
         setMode(() => theme);
         if (theme === "dark") document.documentElement.classList.add("dark");
         else document.documentElement.classList.remove("dark");
