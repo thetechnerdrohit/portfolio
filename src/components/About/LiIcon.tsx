@@ -12,7 +12,12 @@ const LiIcon = ({ reference }: LiIconProps) => {
   });
   return (
     <figure className="absolute left-0 stroke-dark dark:stroke-light">
-      <svg className="-rotate-90 md:w-[60px] md:h-[60px]  xs:w-[40px] xs:h-[40px]" width={75} height={75} viewBox="0 0 100 100">
+      <svg
+        className="-rotate-90 md:h-[60px] md:w-[60px]  xs:h-[40px] xs:w-[40px]"
+        width={75}
+        height={75}
+        viewBox="0 0 100 100"
+      >
         <circle
           cx={75}
           cy={50}
@@ -26,7 +31,7 @@ const LiIcon = ({ reference }: LiIconProps) => {
           cx={75}
           cy={50}
           r={20}
-          className="fill-light dark:fill-dark stroke-[5px]"
+          className="fill-light stroke-[5px] dark:fill-dark"
         />
         <circle
           cx={75}

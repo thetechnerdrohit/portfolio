@@ -5,7 +5,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-argument */
 import Head from "next/head";
 import Image from "next/image";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import AnimatedText from "~/components/Home/AnimatedText";
 import Layout from "~/components/Layout";
 import profilePic from "../../public/images/profile/developer-pic-2.jpg";
@@ -14,6 +14,7 @@ import { useInView, useMotionValue, useSpring } from "framer-motion";
 import Skills from "~/components/About/Skills";
 import Experience from "~/components/About/Experience";
 import TransitionEffect from "~/components/TransitionEffect";
+import TypingEffect from "~/components/TypingEffect";
 
 const AnimatedNumbers = ({ value, springduration }: any) => {
   const ref = useRef<any>(null);
@@ -41,6 +42,7 @@ const AnimatedNumbers = ({ value, springduration }: any) => {
 };
 
 const AboutPage = () => {
+  const [typing, setTyping] = useState([1]);
   return (
     <>
       <Head>
@@ -66,20 +68,34 @@ const AboutPage = () => {
                 always looking for new and innovative ways to bring my clients'
                 visions to life.
               </p>
-
-              <p className="my-4 font-medium">
-                I believe that design is about more than just making things look
-                pretty – it's about solving problems and creating intuitive,
-                enjoyable experiences for users.
-              </p>
-
-              <p className="font-medium ">
-                Whether I'm working on a website, mobile app, or other digital
-                product, I bring my commitment to design excellence and
-                user-centered thinking to every project I work on. I look
-                forward to the opportunity to bring my skills and passion to
-                your next project.
-              </p>
+              {typing.indexOf(1) != -1 && (
+                <p className="my-4 font-medium">
+                  <TypingEffect
+                    sequence={[
+                      `I believe that design is about more than just making things look
+                      pretty – it's about solving problems and creating intuitive,
+                      enjoyable experiences for users.`,
+                      1000,
+                      () => {
+                        setTyping((prev) => [...prev, 2]);
+                      },
+                    ]}
+                  />
+                </p>
+              )}
+              {typing.indexOf(2) != -1 && (
+                <p className="font-medium ">
+                  <TypingEffect
+                    sequence={[
+                      `Whether I'm working on a website, mobile app, or other digital
+                      product, I bring my commitment to design excellence and
+                      user-centered thinking to every project I work on. I look
+                      forward to the opportunity to bring my skills and passion to
+                      your next project.`,
+                    ]}
+                  />
+                </p>
+              )}
             </div>
 
             <div className="relative col-span-3 h-max rounded-2xl border-2 border-solid border-dark bg-light p-8 dark:border-light dark:bg-dark xl:col-span-4 md:order-1 md:col-span-8">

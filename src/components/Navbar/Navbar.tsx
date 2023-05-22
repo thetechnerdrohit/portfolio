@@ -79,7 +79,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className="relative flex w-full items-center justify-between px-32 py-8 font-medium dark:text-light z-10 lg:px-16 md:px-12 sm:px-8">
+    <header className="relative z-10 flex w-full items-center justify-between px-32 py-8 font-medium dark:text-light lg:px-16 md:px-12 sm:px-8">
       <button
         className="hidden flex-col items-center justify-center lg:flex"
         onClick={handleClick}
@@ -206,7 +206,7 @@ const Navbar = () => {
 
           <button
             onClick={() => setMode(mode === "light" ? "dark" : "light")}
-            className={`ml-5 flex items-center justify-center rounded-full p-1 w-7 ${
+            className={`ml-5 flex w-7 items-center justify-center rounded-full p-1 ${
               mode === "light" ? "bg-dark text-light" : "bg-light text-dark"
             }`}
           >

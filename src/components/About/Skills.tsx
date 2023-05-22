@@ -35,7 +35,7 @@ const Skills = () => {
       <h2 className="mt-64 w-full text-center text-8xl font-bold md:mt-32 md:text-6xl">
         Skills
       </h2>
-      <div className="relative flex h-screen w-full items-center justify-center rounded-full bg-circularLight dark:bg-circularDark lg:h-[80vh] lg:bg-circularLightLg lg:dark:bg-circularDarkLg sm:h-[60vh] xs:h-[50vh] md:bg-circularLightMd md:dark:bg-circularDarkMd sm:bg-circularLightSm sm:dark:bg-circularDarkSm">
+      <div className="relative flex h-screen w-full items-center justify-center rounded-full bg-circularLight dark:bg-circularDark lg:h-[80vh] lg:bg-circularLightLg lg:dark:bg-circularDarkLg md:bg-circularLightMd md:dark:bg-circularDarkMd sm:h-[60vh] sm:bg-circularLightSm sm:dark:bg-circularDarkSm xs:h-[50vh]">
         <Skill
           name="Full Stack"
           className="lg:p6 md:p4 !p-6 xs:p-2 xs:text-xs"
