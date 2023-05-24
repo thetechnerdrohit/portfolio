@@ -11,7 +11,6 @@ import Layout from "~/components/Layout";
 import profilePic from "../../public/images/profile/developer-pic-2.jpg";
 import { useRef } from "react";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
-import Skills from "~/components/About/Skills";
 import Experience from "~/components/About/Experience";
 import TransitionEffect from "~/components/TransitionEffect";
 import TypingEffect from "~/components/TypingEffect";
@@ -84,14 +83,14 @@ const AboutPage = () => {
                 </p>
               )}
               {typing.indexOf(2) != -1 && (
-                <p className="font-medium ">
+                <p className="mb-4 font-medium">
                   <TypingEffect
                     sequence={[
                       `Whether I'm working on a website, mobile app, or other digital
                       product, I bring my commitment to design excellence and
                       user-centered thinking to every project I work on. I look
                       forward to the opportunity to bring my skills and passion to
-                      your next project.`,
+                      your next project.`
                     ]}
                   />
                 </p>
@@ -140,7 +139,6 @@ const AboutPage = () => {
               </div>
             </div>
           </div>
-          <Skills />
           <Experience />
         </Layout>
       </main>

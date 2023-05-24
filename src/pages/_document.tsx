@@ -7,7 +7,7 @@ const Document = () => {
   return (
     <Html lang="en">
       <Head />
-      <body>
+      <body className="scrollbar-thin scrollbar-thumb-primary dark:scrollbar-thumb-primaryDark">
         <Script id="theme-switcher" strategy="beforeInteractive">
           {`
             if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {

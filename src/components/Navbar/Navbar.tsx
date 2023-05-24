@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/restrict-template-expressions */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
@@ -21,14 +22,19 @@ interface CustomLink {
 const CustomLink = ({ href, title, className = "" }: CustomLink) => {
   const pathname = usePathname();
   return (
-    <Link className={`${className} group relative`} href={href}>
+    <Link
+      className={`${className} ${
+        pathname === href && "text-primary dark:text-primaryDark"
+      } group relative`}
+      href={href}
+    >
       {title}
 
       <span
         className={`ease absolute -bottom-0.5 
       left-0 inline-block h-[1px]
       bg-dark transition-[width] duration-300 group-hover:w-full ${
-        pathname === href ? "w-full" : "w-0"
+        pathname === href ? "w-full bg-primary dark:bg-primaryDark" : "w-0"
       } dark:bg-light`}
       >
         &nbsp;
@@ -116,6 +122,12 @@ const Navbar = () => {
               toggle={handleClick}
             />
             <CustomMobileLink
+              href="/skills"
+              title="Skill"
+              className=""
+              toggle={handleClick}
+            />
+            <CustomMobileLink
               href="/projects"
               title="Project"
               className=""
@@ -172,6 +184,7 @@ const Navbar = () => {
         <nav>
           <CustomLink href="/" title="Home" className="mr-4" />
           <CustomLink href="/about" title="About" className="mx-4" />
+          <CustomLink href="/skills" title="Skill" className="mx-4" />
           <CustomLink href="/projects" title="Project" className="mx-4" />
         </nav>
 

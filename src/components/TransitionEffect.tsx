@@ -5,7 +5,7 @@ const TransitionEffect = () => {
   return (
     <>
       <motion.div
-        className="fixed bottom-0 right-full top-0 z-30 h-screen w-screen bg-primary"
+        className="fixed bottom-0 right-full top-0 z-30 h-screen w-screen bg-primary dark:bg-primaryDark"
         initial={{ x: "100%", width: "100%" }}
         animate={{ x: "0%", width: "0%" }}
         exit={{ x: ["0%", "100%"], width: ["0%", "100%"] }}

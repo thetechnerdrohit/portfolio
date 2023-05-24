@@ -67,5 +67,5 @@ export default {
       // => @media (max-width: 479px) { ... }
     },
   },
-  plugins: [],
+  plugins: [require('tailwind-scrollbar')],
 } satisfies Config;
