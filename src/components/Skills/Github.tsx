@@ -8,7 +8,8 @@ const Github = () => {
   return (
     <div className="space-y-7">
       <h2 className=" w-full text-center text-6xl md:mt-10 md:text-4xl">
-        Days I <strong className="text-primary dark:text-primaryDark">Code</strong>
+        Days I{" "}
+        <strong className="text-primary dark:text-primaryDark">Code</strong>
       </h2>
       <div className="flex w-full items-center justify-center">
         <GitHubCalendar

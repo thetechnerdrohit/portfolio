@@ -22,7 +22,7 @@ const MyApp: AppType = ({ Component, pageProps }) => {
       <Navbar />
       <AnimatePresence mode="wait">
         <Component key={path} {...pageProps} />
-       {/* <Cursor /> */}
+        {/* <Cursor /> */}
       </AnimatePresence>
       <Footer />
     </main>

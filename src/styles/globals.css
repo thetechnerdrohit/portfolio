@@ -22,7 +22,7 @@
   position: absolute;
   z-index: 11;
   transition-duration: 1.2s;
-  transition-timing-function:  cubic-bezier(0.07, 1.18, 1, 1);
+  transition-timing-function: cubic-bezier(0.07, 1.18, 1, 1);
 }
 .cursor-follower {
   position: absolute;
@@ -31,5 +31,5 @@
   border: 2px solid #ffffff;
   border-radius: 100px;
   transition-duration: 0.1s;
-  transition-timing-function:  cubic-bezier(0.07, 1.18, 1, 1);
+  transition-timing-function: cubic-bezier(0.07, 1.18, 1, 1);
 }
