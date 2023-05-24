@@ -17,7 +17,7 @@ const Github = () => {
           blockSize={15}
           blockMargin={5}
           fontSize={16}
-          colorScheme={mode === "dark" ? mode : "light"}
+          colorScheme={mode === "dark" ? "light" : "dark"}
         />
       </div>
     </div>
