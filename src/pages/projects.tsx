@@ -37,7 +37,10 @@ const Project = ({
           src={img_source}
           alt={name}
           className="h-auto w-full"
-       
+          priority
+          sizes="(max-width: 768px) 100vw,
+                (max-width: 1200px) 50vw,
+                33vw"
         />
       </Link>
 

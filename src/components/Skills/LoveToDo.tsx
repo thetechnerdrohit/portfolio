@@ -8,7 +8,7 @@ const LoveToDo = () => {
       <ul className="m-3">
         <li className="flex items-center space-x-3">
           <ImPointRight className="text-primary dark:text-primaryDark" />
-          <span>Spent time with nature 🏔️🌄🗻</span>
+          <span>Outdoor Recreation Enthusiast 🏔️🌄🗻</span>
         </li>
         <li className="flex items-center space-x-3">
           <ImPointRight className="text-primary dark:text-primaryDark" />

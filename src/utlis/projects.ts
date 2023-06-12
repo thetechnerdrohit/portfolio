@@ -2,7 +2,7 @@ import ovonts from "../../public/images/projects/ovonts.gif"
 import decra from "../../public/images/projects/decra.gif"
 import webuy from "../../public/images/projects/webuy.gif"
 import ifeedback from "../../public/images/projects/ifeedback.gif"
-import wazen from "../../public/images/projects/wazen.gif"
+import wazen from "../../public/images/projects/wazen.png"
 import { type IProject } from "~/interfaces/IProject"
 
 export const ProjectsInfo: IProject[] = [
