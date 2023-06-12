@@ -1,8 +1,3 @@
-import ovonts from "../../public/images/projects/ovonts.png"
-import decra from "../../public/images/projects/decra.png"
-import webuy from "../../public/images/projects/webuy.png"
-import ifeedback from "../../public/images/projects/ifeedback.png"
-import wazen from "../../public/images/projects/wazen.png"
 import { type IProject } from "~/interfaces/IProject"
 
 export const ProjectsInfo: IProject[] = [
@@ -10,7 +5,7 @@ export const ProjectsInfo: IProject[] = [
         "name": "Ovonts - Unify",
         "description": "Ovonts - Unify is a powerful SaaS platform designed to revolutionize influencer marketing. With its comprehensive suite of features, Ovonts - Unify empowers users to effortlessly discover, manage, and collaborate with influencers, all while streamlining campaign execution and tracking progress.",
         "is_featured": true,
-        "img_source": ovonts,
+        "img_source": "https://res.cloudinary.com/vectorarora/image/upload/v1686563363/ovonts_njzhqv.png",
         "source_code_link": "",
         "demo_link": "https://app.ovonts.com/signin/identifier",
         "domains": [
@@ -26,7 +21,7 @@ export const ProjectsInfo: IProject[] = [
         "name": "Decra",
         "description": "Decra: Debit Credit Analytics is an exceptional app designed to revolutionize business financial management. As an integral part of your portfolio, Decra showcases your ability to control finances, prevent revenue leakage, automate reconciliation, and gain deep insights into periodic sales.",
         "is_featured": false,
-        "img_source": decra,
+        "img_source": "https://res.cloudinary.com/vectorarora/image/upload/v1686563363/ovonts_njzhqv.png",
         "source_code_link": "",
         "demo_link": "https://play.google.com/store/apps/details?id=com.view.decra",
         "domains": [
@@ -40,7 +35,7 @@ export const ProjectsInfo: IProject[] = [
         "name": "Webuy",
         "description": "Webuy is a cutting-edge ecommerce platform designed specifically for engineering students, catering to their unique needs and requirements. With a user-friendly interface and a wide range of products, Webuy offers a seamless shopping experience tailored to engineering enthusiasts.",
         "is_featured": false,
-        "img_source": webuy,
+        "img_source": "https://res.cloudinary.com/vectorarora/image/upload/v1686563363/webuy_f7b9op.png",
         "source_code_link": "",
         "demo_link": "https://ecommerce-42a66.web.app/",
         "domains": [
@@ -68,7 +63,7 @@ export const ProjectsInfo: IProject[] = [
         "name": "Wazen",
         "description": "Wazen is an innovative mobile app designed exclusively for Dubai clients, offering a comprehensive platform to effortlessly manage vehicle policies for both 2-wheelers and 4-wheelers. With Wazen, users can purchase, view, renew, cancel, and transfer their policies, providing a seamless and convenient experience for all their insurance needs.",
         "is_featured": false,
-        "img_source": "https://drive.google.com/uc?export=view&id=11paAEUVWhp3TaR8NGIu4k-3tsBEm_skJ",
+        "img_source": "https://res.cloudinary.com/vectorarora/image/upload/v1686563362/wazen_vgl8rp.png",
         "source_code_link": "",
         "demo_link": "https://wplusdev.aspnetdevelopment.in/wazen/dashboard",
         "domains": ["#DubaiClients", "#VehiclePolicies", "#InsuranceSolutions"],
