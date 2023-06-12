@@ -54,7 +54,7 @@ export const ProjectsInfo: IProject[] = [
         "name": "iFeedback",
         "description": "iFeedback is a cutting-edge cross-platform application designed exclusively for restaurants, enabling them to gather valuable feedback from their customers. This powerful tool empowers restaurants to improve their services, enhance customer satisfaction, and drive business growth.",
         "is_featured": false,
-        "img_source": ifeedback,
+        "img_source": "https://res.cloudinary.com/vectorarora/image/upload/v1686563363/ifeedback_su7ld5.png",
         "source_code_link": "",
         "demo_link": "",
         "domains": [
