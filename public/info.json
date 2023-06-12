@@ -4,7 +4,7 @@
       "name": "Ovonts - Unify",
       "description": "Ovonts - Unify is a powerful SaaS platform designed to revolutionize influencer marketing. With its comprehensive suite of features, Ovonts - Unify empowers users to effortlessly discover, manage, and collaborate with influencers, all while streamlining campaign execution and tracking progress.",
       "is_featured": true,
-      "img_source": "https://res.cloudinary.com/vectorarora/image/upload/v1684734735/portfolio_images/ovonts_ursvo1.gif",
+      "img_source": "/images/projects/ovonts.gif",
       "source_code_link": "",
       "demo_link": "https://app.ovonts.com/signin/identifier",
       "domains": [
@@ -20,7 +20,7 @@
       "name": "Decra",
       "description": "Decra: Debit Credit Analytics is an exceptional app designed to revolutionize business financial management. As an integral part of your portfolio, Decra showcases your ability to control finances, prevent revenue leakage, automate reconciliation, and gain deep insights into periodic sales.",
       "is_featured": false,
-      "img_source": "https://drive.google.com/uc?export=view&id=1zNqcBaEEOuM63V5Z0nvnEsOXmfWifFrZ",
+      "img_source": "/images/projects/decra.gif",
       "source_code_link": "",
       "demo_link": "https://play.google.com/store/apps/details?id=com.view.decra",
       "domains": [
@@ -34,7 +34,7 @@
       "name": "Webuy",
       "description": "Webuy is a cutting-edge ecommerce platform designed specifically for engineering students, catering to their unique needs and requirements. With a user-friendly interface and a wide range of products, Webuy offers a seamless shopping experience tailored to engineering enthusiasts.",
       "is_featured": false,
-      "img_source": "https://res.cloudinary.com/vectorarora/image/upload/v1684734745/portfolio_images/webuy_fg8yxj.gif",
+      "img_source": "/images/projects/webuy.gif",
       "source_code_link": "",
       "demo_link": "https://ecommerce-42a66.web.app/",
       "domains": [
@@ -48,7 +48,7 @@
       "name": "iFeedback",
       "description": "iFeedback is a cutting-edge cross-platform application designed exclusively for restaurants, enabling them to gather valuable feedback from their customers. This powerful tool empowers restaurants to improve their services, enhance customer satisfaction, and drive business growth.",
       "is_featured": false,
-      "img_source": "https://res.cloudinary.com/vectorarora/image/upload/v1684734728/portfolio_images/ifeedback_vfvh4y.gif",
+      "img_source": "/images/projects/ifeedback.gif",
       "source_code_link": "",
       "demo_link": "",
       "domains": [
@@ -62,7 +62,7 @@
       "name": "Wazen",
       "description": "Wazen is an innovative mobile app designed exclusively for Dubai clients, offering a comprehensive platform to effortlessly manage vehicle policies for both 2-wheelers and 4-wheelers. With Wazen, users can purchase, view, renew, cancel, and transfer their policies, providing a seamless and convenient experience for all their insurance needs.",
       "is_featured": false,
-      "img_source": "https://res.cloudinary.com/vectorarora/image/upload/v1684734710/portfolio_images/wazen_stgdx0.gif",
+      "img_source": "/images/projects/wazen.gif",
       "source_code_link": "",
       "demo_link": "https://wplusdev.aspnetdevelopment.in/wazen/dashboard",
       "domains": ["#DubaiClients", "#VehiclePolicies", "#InsuranceSolutions"],
