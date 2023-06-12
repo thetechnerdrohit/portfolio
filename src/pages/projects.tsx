@@ -112,7 +112,7 @@ const ProjectsPage = () => {
       name: "All",
       icon: (
         <MdDashboard
-          className={"mr-2 h-5 w-5 text-blue-600 dark:text-blue-500"}
+          className={"mr-2 h-5 w-5 text-primary dark:text-primaryDark"}
         />
       ),
     },
@@ -120,7 +120,7 @@ const ProjectsPage = () => {
       name: "Professional Projects",
       icon: (
         <MdWorkOutline
-          className={"mr-2 h-5 w-5 text-blue-600 dark:text-blue-500"}
+          className={"mr-2 h-5 w-5 text-primary dark:text-primaryDark"}
         />
       ),
     },
@@ -128,7 +128,7 @@ const ProjectsPage = () => {
       name: "Freelance Projects",
       icon: (
         <SiFreelancer
-          className={"mr-2 h-5 w-5 text-blue-600 dark:text-blue-500"}
+          className={"mr-2 h-5 w-5 text-primary dark:text-primaryDark"}
         />
       ),
     },
