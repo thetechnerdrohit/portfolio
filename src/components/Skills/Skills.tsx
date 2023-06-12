@@ -2,6 +2,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import React from "react";
 import { motion } from "framer-motion";
+import Head from "next/head";
 
 const Skill = ({ name, positionX = 0, positionY = 0, className }: any) => {
   return (
@@ -32,6 +33,10 @@ const Skill = ({ name, positionX = 0, positionY = 0, className }: any) => {
 const Skills = () => {
   return (
     <>
+      <Head>
+        <title>Rohit Chauhan | Skills Page</title>
+        <meta name="description" content=""></meta>
+      </Head>
       <h2 className="mt-64 w-full text-center text-8xl font-bold md:mt-32 md:text-6xl">
         Skills
       </h2>
