@@ -9,7 +9,6 @@ import Link from "next/link";
 import { LinkArrow } from "~/components/Icons";
 import HireMe from "~/components/Home/HireMe";
 import TransitionEffect from "~/components/TransitionEffect";
-import Particle from "~/components/Particle";
 
 const Home: NextPage = () => {
   return (

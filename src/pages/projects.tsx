@@ -6,26 +6,14 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import AnimatedText from "~/components/Home/AnimatedText";
 import Layout from "~/components/Layout";
-import {
-  GithubIcon,
-} from "~/components/Icons";
+import { GithubIcon } from "~/components/Icons";
 import { motion } from "framer-motion";
 import TransitionEffect from "~/components/TransitionEffect";
-import info from "public/info.json";
 import Tabs from "~/components/Tabs";
 import { MdDashboard, MdWorkOutline } from "react-icons/md";
 import { SiFreelancer } from "react-icons/si";
-
-interface IProject {
-  name: string;
-  description: string;
-  is_featured: boolean;
-  img_source: string;
-  source_code_link: string;
-  demo_link: string;
-  domains: string[];
-  type: string;
-}
+import { ProjectsInfo } from "~/utlis/projects";
+import { type IProject } from "~/interfaces/IProject";
 
 const FramerImage = motion(Image);
 
@@ -118,7 +106,7 @@ const Project = ({
 
 const ProjectsPage = () => {
   const [activeTab, setActiveTab] = useState<string>("All");
-  const [projects, setProjects] = useState<IProject[]>(info.projects);
+  const [projects, setProjects] = useState<IProject[]>(ProjectsInfo);
   const [tabs] = useState([
     {
       name: "All",
@@ -151,12 +139,12 @@ const ProjectsPage = () => {
   };
 
   useEffect(() => {
-    const filteredProjects: IProject[] = info.projects.filter((x: IProject) =>
+    const filteredProjects: IProject[] = ProjectsInfo.filter((x: IProject) =>
       activeTab.includes(x.type)
     );
     filteredProjects.length
       ? setProjects(filteredProjects)
-      : setProjects(info.projects);
+      : setProjects(ProjectsInfo);
   }, [activeTab]);
 
   return (
