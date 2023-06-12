@@ -1,7 +1,7 @@
-import ovonts from "../../public/images/projects/ovonts.gif"
-import decra from "../../public/images/projects/decra.gif"
-import webuy from "../../public/images/projects/webuy.gif"
-import ifeedback from "../../public/images/projects/ifeedback.gif"
+import ovonts from "../../public/images/projects/ovonts.png"
+import decra from "../../public/images/projects/decra.png"
+import webuy from "../../public/images/projects/webuy.png"
+import ifeedback from "../../public/images/projects/ifeedback.png"
 import wazen from "../../public/images/projects/wazen.png"
 import { type IProject } from "~/interfaces/IProject"
 
