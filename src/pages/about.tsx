@@ -8,8 +8,8 @@ import profilePic from "../../public/images/profile/developer-pic-2.jpg";
 import { useRef } from "react";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
 import Experience from "~/components/About/Experience";
-import TransitionEffect from "~/components/TransitionEffect";
-import TypingEffect from "~/components/TypingEffect";
+import TransitionEffect from "~/effects/TransitionEffect";
+import TypingEffect from "~/effects/TypingEffect";
 
 const AnimatedNumbers = ({ value, springduration }: any) => {
   const ref = useRef<any>(null);

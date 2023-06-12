@@ -6,9 +6,9 @@ import Layout from "~/components/Layout";
 import Image from "next/image";
 import AnimatedText from "~/components/Home/AnimatedText";
 import Link from "next/link";
-import { LinkArrow } from "~/components/Icons";
+import { LinkArrow } from "~/ui/Icons";
 import HireMe from "~/components/Home/HireMe";
-import TransitionEffect from "~/components/TransitionEffect";
+import TransitionEffect from "~/effects/TransitionEffect";
 
 const Home: NextPage = () => {
   return (

@@ -6,7 +6,7 @@
 import Head from "next/head";
 import AnimatedText from "~/components/Home/AnimatedText";
 import Layout from "~/components/Layout";
-import TransitionEffect from "~/components/TransitionEffect";
+import TransitionEffect from "~/effects/TransitionEffect";
 import Techstack from "~/components/Skills/Techstack";
 import Toolstack from "~/components/Skills/Toolstack";
 import LoveToDo from "~/components/Skills/LoveToDo";
@@ -21,7 +21,7 @@ const SkillsPage = () => {
       </Head>
       <TransitionEffect />
       <main className="flex w-full flex-col items-center justify-center dark:text-light">
-        <Layout className="pt-16">
+        <Layout className="pt-16 space-y-14">
           <AnimatedText
             text="Virtuoso"
             className="mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl"

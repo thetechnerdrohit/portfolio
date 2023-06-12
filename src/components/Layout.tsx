@@ -1,4 +1,4 @@
-import Particle from "./Particle";
+import Particle from "~/ui/Particle";
 
 /* eslint-disable @typescript-eslint/restrict-template-expressions */
 const Layout = ({ children, className = "" }: any) => {

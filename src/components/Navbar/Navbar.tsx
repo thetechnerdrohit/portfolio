@@ -7,11 +7,16 @@
 import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
 import Logo from "./Logo";
-import { GithubIcon, MoonIcon, SunIcon, TwitterIcon } from "../Icons";
-import { LinkedInIcon } from "../Icons";
 import { motion } from "framer-motion";
 import useThemeSwitcher from "~/hooks/useThemeSwitcher";
 import { useState } from "react";
+import {
+  GithubIcon,
+  LinkedInIcon,
+  MoonIcon,
+  SunIcon,
+  TwitterIcon,
+} from "~/ui/Icons";
 
 interface CustomLink {
   href: string;

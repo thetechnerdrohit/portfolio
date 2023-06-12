@@ -7,13 +7,21 @@ import {
   DiAngularSimple,
   DiPostgresql,
 } from "react-icons/di";
-import { SiJavascript, SiFirebase, SiNextdotjs, SiIonic } from "react-icons/si";
+import {
+  SiJavascript,
+  SiFirebase,
+  SiNextdotjs,
+  SiIonic,
+  SiTrpc,
+  SiPrisma,
+} from "react-icons/si";
 import Stack from "./Stack";
+import { SiTwilio } from "react-icons/si";
 
 function Techstack() {
   return (
     <>
-      <h2 className="mt-32 w-full text-center text-6xl md:mt-16 md:text-4xl">
+      <h2 className="mt-32 w-full text-center text-6xl md:mt-16 md:text-4xl sm:text-2xl">
         <strong className="text-primary dark:text-primaryDark">
           Professional
         </strong>
@@ -22,6 +30,18 @@ function Techstack() {
       <div className="grid w-full grid-cols-8 items-start justify-center gap-4 2xl:grid-cols-7 xl:grid-cols-6 lg:grid-cols-4 sm:grid-cols-3 xs:grid-cols-2">
         <Stack>
           <SiJavascript />
+        </Stack>
+        <Stack>
+          <SiNextdotjs />
+        </Stack>
+        <Stack>
+          <SiTrpc />
+        </Stack>
+        <Stack>
+          <SiPrisma />
+        </Stack>
+        <Stack>
+          <SiTwilio />
         </Stack>
         <Stack>
           <DiNodejs />
@@ -34,9 +54,6 @@ function Techstack() {
         </Stack>
         <Stack>
           <SiIonic />
-        </Stack>
-        <Stack>
-          <SiNextdotjs />
         </Stack>
         <Stack>
           <DiMongodb />
