@@ -3,13 +3,18 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import AnimatedText from "~/components/Home/AnimatedText";
 import Layout from "~/components/Layout";
-import { GithubIcon } from "~/components/Navbar/Icons";
+import {
+  GithubIcon,
+} from "~/components/Icons";
 import { motion } from "framer-motion";
 import TransitionEffect from "~/components/TransitionEffect";
 import info from "public/info.json";
+import Tabs from "~/components/Tabs";
+import { MdDashboard, MdWorkOutline } from "react-icons/md";
+import { SiFreelancer } from "react-icons/si";
 
 interface IProject {
   name: string;
@@ -19,41 +24,32 @@ interface IProject {
   source_code_link: string;
   demo_link: string;
   domains: string[];
-}
-interface FeaturedProjectProps {
   type: string;
-  title: string;
-  summary: string;
-  image: any;
-  link: string;
-  github: string;
-  hastags: string[];
-  isFeatured: boolean;
 }
 
 const FramerImage = motion(Image);
 
 const Project = ({
   type,
-  title,
-  summary,
-  image,
-  link,
-  github,
-  hastags,
-  isFeatured,
-}: FeaturedProjectProps) => {
+  name,
+  description,
+  img_source,
+  demo_link,
+  source_code_link,
+  domains,
+  is_featured,
+}: IProject) => {
   return (
     <article className="rounder-br-2xl relative flex w-full items-center justify-between rounded-3xl border border-solid border-dark bg-light p-12 shadow-2xl dark:border-light dark:bg-dark lg:flex-col lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4">
       <div className="absolute -right-6 top-1 -z-10 h-[102%] w-[101%] rounded-[2.5rem] rounded-br-3xl bg-dark dark:bg-light lg:-right-2 lg:h-[101%] sm:h-[101%] xs:-right-2  xs:w-full xs:rounded-[1.5rem] " />
       <Link
-        href={link}
+        href={demo_link}
         target="_blank"
         className="w-1/2 cursor-pointer overflow-hidden rounded-lg lg:w-full"
       >
         <FramerImage
-          src={image}
-          alt={title}
+          src={img_source}
+          alt={name}
           width={50}
           height={50}
           className="h-auto w-full"
@@ -67,33 +63,38 @@ const Project = ({
       </Link>
 
       <div className="flex w-1/2 flex-col items-start justify-between pl-6 lg:w-full lg:pl-0 lg:pt-6">
+        {is_featured && (
+          <span className="mr-2 rounded-full bg-red-100 px-2.5 py-0.5 text-xs font-medium text-red-800 dark:bg-red-900 dark:text-red-300">
+            Featured Project
+          </span>
+        )}
         <span className="text-xl font-medium text-primary dark:text-primaryDark xs:text-base">
           {type}
         </span>
         <Link
-          href={link}
+          href={demo_link}
           target="_blank"
           className="underline-offset-2 hover:underline"
         >
           <h2 className="my-2 w-full text-left text-4xl font-bold dark:text-light sm:text-sm">
-            {title}
+            {name}
           </h2>
         </Link>
         <p className="my-2 font-medium text-dark dark:text-light sm:text-sm">
-          {summary}
+          {description}
         </p>
         <div className="mt-2 flex items-center">
-          {github && (
-            <Link href={github} target="_blank" className="w-10">
+          {source_code_link && (
+            <Link href={source_code_link} target="_blank" className="w-10">
               <GithubIcon className="" />
             </Link>
           )}
-          {link && (
+          {demo_link && (
             <Link
-              href={link}
+              href={demo_link}
               target="_blank"
               className={`${
-                github && "ml-4"
+                source_code_link && "ml-4"
               } rounded-lg bg-dark p-2 px-6 text-lg font-semibold text-light dark:bg-light dark:text-dark sm:px-4 sm:text-base`}
             >
               Visit Project
@@ -116,6 +117,48 @@ const Project = ({
 };
 
 const ProjectsPage = () => {
+  const [activeTab, setActiveTab] = useState<string>("All");
+  const [projects, setProjects] = useState<IProject[]>(info.projects);
+  const [tabs] = useState([
+    {
+      name: "All",
+      icon: (
+        <MdDashboard
+          className={"mr-2 h-5 w-5 text-blue-600 dark:text-blue-500"}
+        />
+      ),
+    },
+    {
+      name: "Professional Projects",
+      icon: (
+        <MdWorkOutline
+          className={"mr-2 h-5 w-5 text-blue-600 dark:text-blue-500"}
+        />
+      ),
+    },
+    {
+      name: "Freelance Projects",
+      icon: (
+        <SiFreelancer
+          className={"mr-2 h-5 w-5 text-blue-600 dark:text-blue-500"}
+        />
+      ),
+    },
+  ]);
+
+  const handleActiveTab = (activeTab: string) => {
+    setActiveTab(activeTab);
+  };
+
+  useEffect(() => {
+    const filteredProjects: IProject[] = info.projects.filter((x: IProject) =>
+      activeTab.includes(x.type)
+    );
+    filteredProjects.length
+      ? setProjects(filteredProjects)
+      : setProjects(info.projects);
+  }, [activeTab]);
+
   return (
     <>
       <Head>
@@ -130,9 +173,20 @@ const ProjectsPage = () => {
             className="mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl"
           />
 
-          <div className="grid grid-cols-12 gap-24 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
-            {info.projects.map((project: IProject, index: number) => (
-              <div
+          <Tabs
+            className="mb-5"
+            tabs={tabs}
+            setActiveTab={handleActiveTab}
+            activeTab={activeTab}
+          />
+
+          <motion.div
+            layout
+            className="grid grid-cols-12 gap-24 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0"
+          >
+            {projects?.map((project: IProject, index: number) => (
+              <motion.div
+                layout
                 key={`project-${index}`}
                 className={` ${
                   project.is_featured
@@ -141,20 +195,16 @@ const ProjectsPage = () => {
                 }`}
               >
                 <Project
-                  type={
-                    project.is_featured
-                      ? "Professional Project"
-                      : "Freelance Project"
-                  }
-                  title={project.name}
-                  summary={project.description}
-                  image={project.img_source}
-                  link={project.demo_link}
-                  github={project.source_code_link}
-                  hastags={project.domains}
-                  isFeatured={project.is_featured}
+                  type={project.type}
+                  name={project.name}
+                  description={project.description}
+                  img_source={project.img_source}
+                  demo_link={project.demo_link}
+                  source_code_link={project.source_code_link}
+                  domains={project.domains}
+                  is_featured={project.is_featured}
                 />
-              </div>
+              </motion.div>
             ))}
             {/* 
             <div className="col-span-6 sm:col-span-12">
@@ -197,7 +247,7 @@ const ProjectsPage = () => {
                 github={""}
               />
             </div> */}
-          </div>
+          </motion.div>
         </Layout>
       </main>
     </>

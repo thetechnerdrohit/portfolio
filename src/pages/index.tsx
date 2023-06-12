@@ -6,7 +6,7 @@ import Layout from "~/components/Layout";
 import Image from "next/image";
 import AnimatedText from "~/components/Home/AnimatedText";
 import Link from "next/link";
-import { LinkArrow } from "~/components/Navbar/Icons";
+import { LinkArrow } from "~/components/Icons";
 import HireMe from "~/components/Home/HireMe";
 import TransitionEffect from "~/components/TransitionEffect";
 import Particle from "~/components/Particle";

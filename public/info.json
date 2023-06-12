@@ -13,55 +13,60 @@
         "#CampaignManagement",
         "#InfluencerCollaboration",
         "#InfluencerMarketingRevolution"
-      ]
+      ],
+      "type": "Professional Project"
+    },
+    {
+      "name": "Decra",
+      "description": "Decra: Debit Credit Analytics is an exceptional app designed to revolutionize business financial management. As an integral part of your portfolio, Decra showcases your ability to control finances, prevent revenue leakage, automate reconciliation, and gain deep insights into periodic sales.",
+      "is_featured": false,
+      "img_source": "https://drive.google.com/file/d/1zNqcBaEEOuM63V5Z0nvnEsOXmfWifFrZ/preview",
+      "source_code_link": "",
+      "demo_link": "https://play.google.com/store/apps/details?id=com.view.decra",
+      "domains": [
+        "#DebitCreditAnalytics",
+        "#BusinessFinances",
+        "#AutomatedReconciliation"
+      ],
+      "type": "Freelance Project"
     },
     {
       "name": "Webuy",
       "description": "Webuy is a cutting-edge ecommerce platform designed specifically for engineering students, catering to their unique needs and requirements. With a user-friendly interface and a wide range of products, Webuy offers a seamless shopping experience tailored to engineering enthusiasts.",
       "is_featured": false,
-      "img_source": "https://res.cloudinary.com/vectorarora/image/upload/portfolio_images/webuy_fg8yxj.gif",
+      "img_source": "https://res.cloudinary.com/vectorarora/image/upload/v1684734745/portfolio_images/webuy_fg8yxj.gif",
       "source_code_link": "",
-      "demo_link": "",
+      "demo_link": "https://ecommerce-42a66.web.app/",
       "domains": [
         "#EcommercePlatform",
         "#EngineeringStudents",
         "#SeamlessShopping"
-      ]
-    },
-    {
-      "name": "Wazen",
-      "description": "Wazen is an innovative mobile app designed exclusively for Dubai clients, offering a comprehensive platform to effortlessly manage vehicle policies for both 2-wheelers and 4-wheelers. With Wazen, users can purchase, view, renew, cancel, and transfer their policies, providing a seamless and convenient experience for all their insurance needs.",
-      "is_featured": true,
-      "img_source": "https://res.cloudinary.com/vectorarora/image/upload/portfolio_images/wazen_stgdx0.gif",
-      "source_code_link": "",
-      "demo_link": "https://wplusdev.aspnetdevelopment.in/wazen/dashboard",
-      "domains": ["#DubaiClients", "#VehiclePolicies", "#InsuranceSolutions"]
+      ],
+      "type": "Freelance Project"
     },
     {
       "name": "iFeedback",
       "description": "iFeedback is a cutting-edge cross-platform application designed exclusively for restaurants, enabling them to gather valuable feedback from their customers. This powerful tool empowers restaurants to improve their services, enhance customer satisfaction, and drive business growth.",
       "is_featured": false,
-      "img_source": "https://res.cloudinary.com/vectorarora/image/upload/portfolio_images/ifeedback_vfvh4y.gif",
+      "img_source": "https://res.cloudinary.com/vectorarora/image/upload/v1684734728/portfolio_images/ifeedback_vfvh4y.gif",
       "source_code_link": "",
       "demo_link": "",
       "domains": [
         "#RestaurantFeedback",
         "#CustomerExperience",
         "#ServiceImprovement"
-      ]
+      ],
+      "type": "Freelance Project"
     },
     {
-      "name": "Decra",
-      "description": "Decra: Debit Credit Analytics is an exceptional app designed to revolutionize business financial management. As an integral part of your portfolio, Decra showcases your ability to control finances, prevent revenue leakage, automate reconciliation, and gain deep insights into periodic sales.",
+      "name": "Wazen",
+      "description": "Wazen is an innovative mobile app designed exclusively for Dubai clients, offering a comprehensive platform to effortlessly manage vehicle policies for both 2-wheelers and 4-wheelers. With Wazen, users can purchase, view, renew, cancel, and transfer their policies, providing a seamless and convenient experience for all their insurance needs.",
       "is_featured": false,
-      "img_source": "https://res.cloudinary.com/vectorarora/image/upload/portfolio_images/webuy_fg8yxj.gif",
+      "img_source": "https://res.cloudinary.com/vectorarora/image/upload/v1684734710/portfolio_images/wazen_stgdx0.gif",
       "source_code_link": "",
-      "demo_link": "",
-      "domains": [
-        "#DebitCreditAnalytics",
-        "#BusinessFinances",
-        "#AutomatedReconciliation"
-      ]
+      "demo_link": "https://wplusdev.aspnetdevelopment.in/wazen/dashboard",
+      "domains": ["#DubaiClients", "#VehiclePolicies", "#InsuranceSolutions"],
+      "type": "Professional Project"
     }
   ]
 }
