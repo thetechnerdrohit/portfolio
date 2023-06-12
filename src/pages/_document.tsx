@@ -7,6 +7,7 @@ const Document = () => {
   return (
     <Html lang="en">
       <Head />
+      <link rel="icon" href="/favicon.png" sizes="any" />
       <body className="scrollbar-thin scrollbar-thumb-primary dark:scrollbar-thumb-primaryDark">
         <Script id="theme-switcher" strategy="beforeInteractive">
           {`
