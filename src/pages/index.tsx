@@ -9,10 +9,15 @@ import Link from "next/link";
 import { LinkArrow } from "~/ui/Icons";
 import HireMe from "~/components/Home/HireMe";
 import TransitionEffect from "~/effects/TransitionEffect";
+import Head from "next/head";
 
 const Home: NextPage = () => {
   return (
     <>
+      <Head>
+        <title>Rohit Chauhan | Home Page</title>
+        <meta name="description" content=""></meta>
+      </Head>
       <TransitionEffect />
       <main className="flex min-h-screen w-full items-center text-dark dark:text-light">
         <Layout className="pt-0 md:pt-16 sm:pt-8">
