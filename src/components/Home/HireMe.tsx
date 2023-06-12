@@ -1,6 +1,6 @@
 import React from "react";
-import { CircularText } from "../Icons";
 import Link from "next/link";
+import { CircularText } from "~/ui/Icons";
 
 const HireMe = () => {
   return (

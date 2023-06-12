@@ -4,7 +4,7 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import AnimatedText from "~/components/Home/AnimatedText";
 import Layout from "~/components/Layout";
-import profilePic from "../../public/images/profile/developer-pic-2.jpg";
+import profilePic from "../../public/images/profile/developer-pic-2.png";
 import { useRef } from "react";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
 import Experience from "~/components/About/Experience";
