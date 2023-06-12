@@ -68,7 +68,7 @@ export const ProjectsInfo: IProject[] = [
         "name": "Wazen",
         "description": "Wazen is an innovative mobile app designed exclusively for Dubai clients, offering a comprehensive platform to effortlessly manage vehicle policies for both 2-wheelers and 4-wheelers. With Wazen, users can purchase, view, renew, cancel, and transfer their policies, providing a seamless and convenient experience for all their insurance needs.",
         "is_featured": false,
-        "img_source": wazen,
+        "img_source": "https://drive.google.com/uc?export=view&id=11paAEUVWhp3TaR8NGIu4k-3tsBEm_skJ",
         "source_code_link": "",
         "demo_link": "https://wplusdev.aspnetdevelopment.in/wazen/dashboard",
         "domains": ["#DubaiClients", "#VehiclePolicies", "#InsuranceSolutions"],
