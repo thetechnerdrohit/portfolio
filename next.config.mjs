@@ -19,7 +19,7 @@ const config = {
     defaultLocale: "en",
   },
   images: {
-    domains: ["res.cloudinary.com", "drive.google.com"],
+    domains: ["res.cloudinary.com", "drive.google.com", "thetechnerdrohit2.netlify.app"],
   },
 };
 export default config;
