@@ -15,8 +15,6 @@ import { SiFreelancer } from "react-icons/si";
 import { ProjectsInfo } from "~/utlis/projects";
 import { type IProject } from "~/interfaces/IProject";
 
-const FramerImage = motion(Image);
-
 const Project = ({
   type,
   name,
@@ -38,15 +36,11 @@ const Project = ({
         <Image
           src={img_source}
           alt={name}
-          width={50}
-          height={50}
           className="h-auto w-full"
-          // whileHover={{ scale: 1.05 }}
-          // transition={{ duration: 0.2 }}
-          // priority
-          // sizes="(max-width: 768px) 100vw,
-          //       (max-width: 1200px) 50vw,
-          //       33vw"
+          priority
+          sizes="(max-width: 768px) 100vw,
+                (max-width: 1200px) 50vw,
+                33vw"
         />
       </Link>
 

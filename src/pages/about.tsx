@@ -1,8 +1,4 @@
-/* eslint-disable react/no-unescaped-entities */
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
-/* eslint-disable @typescript-eslint/no-unsafe-call */
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
-/* eslint-disable @typescript-eslint/no-unsafe-argument */
+
 import Head from "next/head";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
@@ -19,19 +15,23 @@ const AnimatedNumbers = ({ value, springduration }: any) => {
   const ref = useRef<any>(null);
   const motionValue = useMotionValue(0);
   const springValue = useSpring(motionValue, {
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     duration: springduration || 3000,
   });
   const isInView = useInView(ref, { once: true });
 
   useEffect(() => {
     if (isInView) {
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
       motionValue.set(value);
     }
   }, [isInView, value, motionValue]);
 
   useEffect(() => {
     springValue.on("change", (latestValue) => {
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call
       if (ref.current && latestValue.toFixed(0) <= value) {
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call
         ref.current["textContent"] = latestValue.toFixed(0);
       }
     });
@@ -61,10 +61,10 @@ const AboutPage = () => {
                 Biography
               </h2>
               <p className="font-medium ">
-                Hi, I'm Rohit Chauhan, a web developer with a passion for
+                Hi, I&apos;m Rohit Chauhan, a web developer with a passion for
                 creating beautiful, functional, and user-centered digital
                 experiences. With 5+ years of experience in the field. I am
-                always looking for new and innovative ways to bring my clients'
+                always looking for new and innovative ways to bring my clients&apos;
                 visions to life.
               </p>
               {typing.indexOf(1) != -1 && (
