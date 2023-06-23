@@ -194,7 +194,7 @@ const Navbar = () => {
         </nav>
 
         <nav className="flex flex-wrap items-center justify-center">
-          <motion.a
+          {/* <motion.a
             href="/"
             target="_blank"
             whileHover={{ y: -2 }}
@@ -202,7 +202,7 @@ const Navbar = () => {
             className="mx-3 w-6"
           >
             <TwitterIcon className="" />
-          </motion.a>
+          </motion.a> */}
           <motion.a
             href="https://github.com/thetechnerdrohit"
             target="_blank"

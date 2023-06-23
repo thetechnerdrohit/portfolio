@@ -16,7 +16,7 @@ const SkillsPage = () => {
   return (
     <>
       <Head>
-        <title>Rohit Chauhan | About Page</title>
+        <title>Rohit Chauhan | Skills Page</title>
         <meta name="description" content=""></meta>
       </Head>
       <TransitionEffect />
